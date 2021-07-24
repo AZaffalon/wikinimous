@@ -1,2 +1,17 @@
-<h2><%= @articles.title %></h2>
-<p><%= @articles.content %></p>
+<h2><%= @article.title %></h2>
+<p><%= @article.content %></p>
+
+<a href="#">
+  <%= link_to 'Update', edit_article_path(@article) %>
+</a>
+
+<a href="#">
+  <%= link_to 'Delete', 
+              article_path(@article),
+              method: :delete,
+              data: { confirm: 'Are you sure ?'} %>
+</a>
+
+<a href="#">
+  <%= link_to 'Back to main page', root_path %>
+</a>

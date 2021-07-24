@@ -12,6 +12,7 @@ require 'faker'
 # 10times -> content & 10times -> title
 puts "Reset DB ..."
 
+Article.destroy_all
 puts "Create articles..."
 
 10.times do
